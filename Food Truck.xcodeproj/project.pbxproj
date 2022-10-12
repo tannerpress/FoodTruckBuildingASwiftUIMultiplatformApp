@@ -161,6 +161,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		34A1DF19294A8D0000ED9386 /* Food Truck AllDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Food Truck AllDebug.entitlements"; sourceTree = "<group>"; };
 		6178CE6D2845B07E00F240E8 /* CardNavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNavigationHeader.swift; sourceTree = "<group>"; };
 		7AE906C103F323E6CEF38CA5 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		84ACCDC5282D671600756FB7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -309,6 +310,7 @@
 		E0C37BB82823189A007B925B = {
 			isa = PBXGroup;
 			children = (
+				34A1DF19294A8D0000ED9386 /* Food Truck AllDebug.entitlements */,
 				E0BCD66B2823850F000FDF0D /* README.md */,
 				E0C37BC32823189A007B925B /* App */,
 				E0C37BDC282326EF007B925B /* FoodTruckKit */,
@@ -761,7 +763,7 @@
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "App/Entitlements-All.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Food Truck AllDebug.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
