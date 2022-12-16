@@ -1,0 +1,10 @@
+{
+	"name": "AzureKeyVault704",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/9fc05203-7761-44a5-9121-7c9aaf94a866/resourceGroups/DefaultResourceGroup/providers/Microsoft.KeyVault/vaults/MatthewKeyVault",
+		"groupId": "vault",
+		"fqdns": [
+			"matthewkeyvault.vault.azure.net"
+		]
+	}
+}

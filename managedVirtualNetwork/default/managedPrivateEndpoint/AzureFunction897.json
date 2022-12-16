@@ -1,0 +1,7 @@
+{
+	"name": "AzureFunction897",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/9fc05203-7761-44a5-9121-7c9aaf94a866/resourceGroups/DefaultResourceGroup/providers/Microsoft.Web/sites/tannerpress",
+		"groupId": "sites"
+	}
+}

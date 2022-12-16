@@ -1,0 +1,15 @@
+{
+	"name": "TannerpressDataFactory",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned,UserAssigned",
+		"principalId": "6fa15d9a-846f-4aef-8b45-f71033175442",
+		"tenantId": "968bcb4d-036c-4460-83aa-31c466eb4f56",
+		"userAssignedIdentities": {
+			"/subscriptions/9fc05203-7761-44a5-9121-7c9aaf94a866/resourcegroups/DefaultResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/Matthew": {
+				"clientId": "ef7b5728-9e48-4767-99ff-c46db21e9d51",
+				"principalId": "cf832224-4964-4e3b-9d21-7728630290ab"
+			}
+		}
+	}
+}
