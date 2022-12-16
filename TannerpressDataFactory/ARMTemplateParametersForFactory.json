@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "TannerpressDataFactory"
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://MatthewKeyVault.vault.azure.net/"
+		},
+		"AzureFunction897_properties_privateLinkResourceId": {
+			"value": "/subscriptions/9fc05203-7761-44a5-9121-7c9aaf94a866/resourceGroups/DefaultResourceGroup/providers/Microsoft.Web/sites/tannerpress"
+		},
+		"AzureFunction897_properties_groupId": {
+			"value": "sites"
+		},
+		"AzureKeyVault704_properties_privateLinkResourceId": {
+			"value": "/subscriptions/9fc05203-7761-44a5-9121-7c9aaf94a866/resourceGroups/DefaultResourceGroup/providers/Microsoft.KeyVault/vaults/MatthewKeyVault"
+		},
+		"AzureKeyVault704_properties_groupId": {
+			"value": "vault"
+		},
+		"AzureKeyVault704_properties_fqdns": {
+			"value": [
+				"matthewkeyvault.vault.azure.net"
+			]
+		}
+	}
+}

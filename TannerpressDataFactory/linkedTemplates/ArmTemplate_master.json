@@ -1,0 +1,93 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "TannerpressDataFactory"
+		},
+		"SqlServer1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://MatthewKeyVault.vault.azure.net/"
+		},
+		"AzureFunction897_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/9fc05203-7761-44a5-9121-7c9aaf94a866/resourceGroups/DefaultResourceGroup/providers/Microsoft.Web/sites/tannerpress"
+		},
+		"AzureFunction897_properties_groupId": {
+			"type": "string",
+			"defaultValue": "sites"
+		},
+		"AzureKeyVault704_properties_privateLinkResourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/9fc05203-7761-44a5-9121-7c9aaf94a866/resourceGroups/DefaultResourceGroup/providers/Microsoft.KeyVault/vaults/MatthewKeyVault"
+		},
+		"AzureKeyVault704_properties_groupId": {
+			"type": "string",
+			"defaultValue": "vault"
+		},
+		"AzureKeyVault704_properties_fqdns": {
+			"type": "array",
+			"defaultValue": [
+				"matthewkeyvault.vault.azure.net"
+			]
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "TannerpressDataFactory_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"AzureFunction897_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureFunction897_properties_privateLinkResourceId')]"
+					},
+					"AzureFunction897_properties_groupId": {
+						"value": "[parameters('AzureFunction897_properties_groupId')]"
+					},
+					"AzureKeyVault704_properties_privateLinkResourceId": {
+						"value": "[parameters('AzureKeyVault704_properties_privateLinkResourceId')]"
+					},
+					"AzureKeyVault704_properties_groupId": {
+						"value": "[parameters('AzureKeyVault704_properties_groupId')]"
+					},
+					"AzureKeyVault704_properties_fqdns": {
+						"value": "[parameters('AzureKeyVault704_properties_fqdns')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
